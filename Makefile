@@ -14,11 +14,13 @@ clone-tag:
 
 build: ## Builds the docker image for the service
 build: TAG=latest
+build: 
 	docker --debug build -t wdp-test:$(TAG) .
 
 
 push: ## Pushes image to registry
 push: TAG=latest
+push: 
 	echo 'Pushes image to the private docker registry registry'
 	docker tag wdp-test:$(TAG) $(DOCKER_REGISTRY_URL)/$(NAMESPACE)/:wdp-test:$(TAG)
 	docker push $(DOCKER_REGISTRY_URL)/$(NAMESPACE)/:wdp-test:$(TAG)
