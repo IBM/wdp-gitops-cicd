@@ -58,7 +58,7 @@ jobs:
         make push TAG=${{ steps.get_version.outputs.VERSION }}
   echo-job:
     runs-on: ubuntu-latest
-    if: contains(github.ref, "dev")
+    if: contains(github.ref, 'dev')
     steps:
     - run: echo "I only run if the branch has release in its name!"
 
