@@ -22,5 +22,5 @@ push: ## Pushes image to registry
 push: TAG=latest
 push: 
 	echo 'Pushes image to the private docker registry registry'
-	docker tag wdp-test:$(TAG) $(DOCKER_REGISTRY_URL)/$(NAMESPACE)/:wdp-test:$(TAG)
-	docker push $(DOCKER_REGISTRY_URL)/$(NAMESPACE)/:wdp-test:$(TAG)
+	docker tag wdp-test:$(TAG) $(DOCKER_REGISTRY_URL)/$(NAMESPACE)/wdp-test:$(TAG)
+	docker push $(DOCKER_REGISTRY_URL)/$(NAMESPACE)/wdp-test:$(TAG)
