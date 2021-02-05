@@ -60,6 +60,6 @@ jobs:
     runs-on: ubuntu-latest
     if: contains(github.ref, 'dev')
     steps:
-    - run: echo "I only run if the branch has release in its name!"
+    - run: echo "I only run if the branch has something useful in its name!"
 
 
