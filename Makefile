@@ -5,10 +5,10 @@
 clone-tag: ## Clone 'TAG' version from 
 clone-tag: TAG=v0.0.1
 clone-tag: TARGETDIR=src/serving
-clone-tag: SOURCE=git@github.com:IBM/ibm-cloud-dublin-meetup.git
+clone-tag: SOURCE=github.com/IBM/ibm-cloud-dublin-meetup.git
 clone-tag:
 	-rm -fr $(TARGETDIR)
-	git clone -b '$(TAG)' --single-branch --depth 1 $(SOURCE) $(TARGETDIR)
+	git clone -b '$(TAG)' --single-branch --depth 1 https://$(REPO_CRED)@$(SOURCE) $(TARGETDIR)
 	echo $(TAG) > $(TARGETDIR)/VERSION
 
 
