@@ -15,7 +15,7 @@ clone-tag:
 build: ## Builds the docker image for the service
 build: TAG=latest
 build: 
-	docker run -it --rm maven:3.6.3-jdk-8-slim echo teasdfst
+	docker run -t --rm maven:3.6.3-jdk-8-slim echo teasdfst
 	docker --debug build -t wdp-test:$(TAG) .
 
 
